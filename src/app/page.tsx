@@ -1,9 +1,11 @@
 import { Button } from "@/components/ui/button";
+import { UserButton } from "@clerk/nextjs";
 import Link from "next/link";
 
 export default function Home() {
   return (
     <>
+    <UserButton />
       <div className="flex items-center justify-center flex-col py-10 w-full">
         <div>
           <div className="flex flex-col">
@@ -15,10 +17,10 @@ export default function Home() {
               notre application intuitive{" "}
             </p>
             <div className="flex justify-center mt-4 items-center">
-              <Link href={""}>
+              <Link href={"/sign-in"}>
                 <Button variant={"default"} size={"lg"} > Se connecter</Button>
               </Link>
-              <Link href={""}>
+              <Link href={"/sign-up"}>
                 <Button variant={"outline"} size={"lg"} className="ml-2" > S&apos;inscrire</Button>
               </Link>
             </div>
